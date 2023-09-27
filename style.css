@@ -12,6 +12,9 @@
 .justify-center {
 	justify-content: center;
 }
+.justify-between {
+	justify-content: space-between;
+}
 .item-center {
 	align-items: center;
 }
@@ -26,18 +29,23 @@
 body {
 	background: #222;
 }
-/* Search Bar Container */
+
+/* The main container with gradient background */
 .card {
+	min-height: 82vh;
 	width: 90%;
 	background: linear-gradient(135deg, #00feba, #5b548a);
 	color: #fff;
-	margin: 50px auto 0;
+	margin: 50px auto;
 	border-radius: 20px;
 	padding: 40px 35px;
 	text-align: center;
 }
-.search {
+
+/* Search Bar Container */
+.container {
 	width: 60%;
+	margin: 0 auto;
 }
 .search input {
 	color: #555;
@@ -56,26 +64,57 @@ body {
 	width: 18px;
 }
 
+/* Weather Icon */
+.weather-icon{
+	width: 170px;
+	margin-top: 30px;
+}
+.weather h1{
+	font-size: 80px;
+	font-weight: 500;
+}
+.weather h2{
+	font-size: 45px;
+	font-weight: 400;
+	margin-top: -10px;
+}
+.details{
+	padding: 0 20px;
+	margin-top: 50px;
+}
+.col{
+	text-align: left;
+}
+.col img{
+	width: 40px;
+	margin-right: 10px;
+}
+.humidity, .wind{
+	font-size: 28px;
+	margin-top: -6px;
+}
 
 /* Responsive */
 /* Tablet */
 @media only screen and (max-width: 768px) and (min-width: 577px){
-    .search {
+    .container {
         width: 80%;
     }
 }
 /* Mobile */
 @media only screen and (max-width: 576px){
-    .search {
+    .container {
         width: 100%;
     }
 }
 /* Extra Small */
 @media only screen and (max-width: 460px) {
     .card {
-        width: 95%;
-        margin: 10px;
-        padding: 15px;
+		min-height: 100vh;
+        width: 100%;
+		margin: 0;
+		padding: 40px 20px;
+		border-radius: 0;
     }
 	.search input {
 		padding: 10px 15px;

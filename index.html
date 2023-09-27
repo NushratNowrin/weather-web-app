@@ -14,14 +14,33 @@
 		<title>Weather Web App</title>
 	</head>
 	<body>
-		<!-- Search Bar Container -->
-		<div class="card flex justify-center item-center">
-			<div class="search flex justify-center item-center">
+		
+		<div class="card ">
+            <!-- Search Bar Container -->
+			<div class="container search flex justify-center item-center">
 				<input class="search-contain" type="text" placeholder="Enter City Name" spellcheck="false" />
 				<button class="flex justify-center item-center search-contain"><img src="images/search.png" alt="Search icon" /></button>
 			</div>
-            <div class="weather">
-                
+            <div class="container weather">
+                <img class="weather-icon" src="images/rain.png" alt="Rain Icon">
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">New York</h2>
+                <div class="details flex justify-between item-center">
+                    <div class="col flex item-center">
+                        <img src="images/humidity.png" alt="Humidity">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col flex item-center">
+                        <img src="images/wind.png" alt="Wind">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 		</div>
 	</body>
