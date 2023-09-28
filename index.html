@@ -28,18 +28,22 @@
 			<!-- Search Bar Container -->
 			<div class="container search responsive-flex justify-center item-center">
 				<input
-					class="search-contain"
+					class="search-input search-contain"
 					type="text"
 					placeholder="Enter City Name"
 					spellcheck="false" />
 				<!-- <button class="flex justify-center item-center search-contain">
 					<img src="images/search.png" alt="Search icon" />
 				</button> -->
-				<button class="flex justify-center item-center search-contain">
+				<button class="search-btn search-contain flex justify-center item-center ">
 					Get Weather
 				</button>
 			</div>
 
+            <div id="not-found">
+                <img src="images/search.gif" alt="searching">
+                <p>Invalid City Name</p>
+            </div>
 			<!-- Weather Details -->
 			<div class="container" id="container">
 				<!-- Icon, Celcius and City name -->
@@ -66,69 +70,22 @@
 					<div class="col flex justify-center item-center">
 						<img src="images/humidity.png" alt="Humidity" />
 						<div>
-							<p class="humidity">50%</p>
+                            <p ><span class="humidity">0</span> %</p>
 							<p>Humidity</p>
 						</div>
 					</div>
 					<div class="col flex justify-center item-center">
 						<img src="images/wind.png" alt="Wind" />
 						<div>
-							<p class="wind">15 km/h</p>
+							<p ><span class="wind">0</span> km/h</p>
 							<p>Wind Speed</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<script>
-			const apiKey = "0af1269892ffd580e12241bf7b5e907c";
-			const apiUrl =
-				"https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhaka";
-
-			async function checkWeather() {
-				try {
-					const response = await fetch(apiUrl + `&appid=${apiKey}`);
-
-					if (!response.ok) {
-                        document.getElementById("container").innerHTML = "Data Not Found";
-						document.getElementById("container").style.marginTop = "40px";
-						document.getElementById("container").style.minHeight = "50vh";
-						throw new Error(`Request failed with status ${response.status}`);
-					}
-					// const response = await fetch(apiUrl + `&appid=${apiKey}`);
-					var data = await response.json();
-					// console.log(data);
-					document.querySelector(".city").innerHTML = data.name;
-					const temperature = data.main.temp;
-					document.querySelector(".temp").innerHTML = temperature;
-					document
-						.getElementById("celcius")
-						.addEventListener("click", function () {
-							document.querySelector(".temp").innerHTML = temperature;
-							document.getElementById("celcius").style.backgroundColor =
-								"yellow";
-							document.getElementById("farenheit").style.backgroundColor =
-								"white";
-						});
-					document
-						.getElementById("farenheit")
-						.addEventListener("click", function () {
-							document.querySelector(".temp").innerHTML = (
-								temperature * (9 / 5) +
-								32
-							).toFixed(2);
-							document.getElementById("farenheit").style.backgroundColor =
-								"yellow";
-							document.getElementById("celcius").style.backgroundColor =
-								"white";
-						});
-				} catch (error) {
-					console.error(error);
-				}
-			}
-			checkWeather();
-		</script>
+        <!-- linking with JavaScript file -->
+		<script src="style.js"></script>
 	</body>
 </html>
 
