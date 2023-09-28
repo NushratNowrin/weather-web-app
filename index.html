@@ -41,7 +41,7 @@
 			</div>
 
 			<!-- Weather Details -->
-			<div class="container">
+			<div class="container" id="container">
 				<!-- Icon, Celcius and City name -->
 				<div
 					class="weather-container responsive-flex item-center justify-center">
@@ -50,7 +50,11 @@
 						<div>
 							<h1 class="flex justify-center">
 								<span class="temp">0</span
-								><span class="temp-btn-container flex item-center"><button class="temp-btn" id="celcius">°C</button><span class="temp-divider">|</span><button class="temp-btn" id="farenheit">°F</button></span>
+								><span class="temp-btn-container flex item-center"
+									><button class="temp-btn" id="celcius">°C</button
+									><span class="temp-divider">|</span
+									><button class="temp-btn" id="farenheit">°F</button></span
+								>
 							</h1>
 						</div>
 						<h2 class="city">City</h2>
@@ -81,24 +85,47 @@
 			const apiKey = "0af1269892ffd580e12241bf7b5e907c";
 			const apiUrl =
 				"https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhaka";
-                
+
 			async function checkWeather() {
-				const response = await fetch(apiUrl + `&appid=${apiKey}`);
-				var data = await response.json();
-				console.log(data);
-				document.querySelector(".city").innerHTML = data.name;
-                const temperature = data.main.temp;
-                document.querySelector(".temp").innerHTML = temperature;
-                document.getElementById('celcius').addEventListener('click', function(){
-                    document.querySelector(".temp").innerHTML = temperature;
-                    document.getElementById('celcius').style.backgroundColor = 'yellow';
-                    document.getElementById('farenheit').style.backgroundColor = 'white';
-                })
-                document.getElementById('farenheit').addEventListener('click', function(){
-                    document.querySelector(".temp").innerHTML = (temperature*(9/5)+32).toFixed(2);
-                    document.getElementById('farenheit').style.backgroundColor = 'yellow';
-                    document.getElementById('celcius').style.backgroundColor = 'white'
-                })	
+				try {
+					const response = await fetch(apiUrl + `&appid=${apiKey}`);
+
+					if (!response.ok) {
+                        document.getElementById("container").innerHTML = "Data Not Found";
+						document.getElementById("container").style.marginTop = "40px";
+						document.getElementById("container").style.minHeight = "50vh";
+						throw new Error(`Request failed with status ${response.status}`);
+					}
+					// const response = await fetch(apiUrl + `&appid=${apiKey}`);
+					var data = await response.json();
+					// console.log(data);
+					document.querySelector(".city").innerHTML = data.name;
+					const temperature = data.main.temp;
+					document.querySelector(".temp").innerHTML = temperature;
+					document
+						.getElementById("celcius")
+						.addEventListener("click", function () {
+							document.querySelector(".temp").innerHTML = temperature;
+							document.getElementById("celcius").style.backgroundColor =
+								"yellow";
+							document.getElementById("farenheit").style.backgroundColor =
+								"white";
+						});
+					document
+						.getElementById("farenheit")
+						.addEventListener("click", function () {
+							document.querySelector(".temp").innerHTML = (
+								temperature * (9 / 5) +
+								32
+							).toFixed(2);
+							document.getElementById("farenheit").style.backgroundColor =
+								"yellow";
+							document.getElementById("celcius").style.backgroundColor =
+								"white";
+						});
+				} catch (error) {
+					console.error(error);
+				}
 			}
 			checkWeather();
 		</script>

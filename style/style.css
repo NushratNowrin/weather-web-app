@@ -32,9 +32,11 @@ body {
 	border-radius: 30px;
 	cursor: pointer;
 }
-/* .search button img {
-	width: 18px;
-} */
+
+.not-found{
+	display: none;
+}
+
 
 /* Weather Details*/
 
