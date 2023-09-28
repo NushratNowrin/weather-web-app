@@ -25,7 +25,6 @@
 	<!-- Body Section -->
 	<body>
 		<div class="card">
-
 			<!-- Search Bar Container -->
 			<div class="container search responsive-flex justify-center item-center">
 				<input
@@ -43,13 +42,17 @@
 
 			<!-- Weather Details -->
 			<div class="container">
-
 				<!-- Icon, Celcius and City name -->
 				<div
 					class="weather-container responsive-flex item-center justify-center">
 					<img class="weather-icon" src="images/rain.png" alt="Rain Icon" />
 					<div class="weather">
-						<h1 class="temp">22°C</h1>
+						<div>
+							<h1 class="flex">
+								<span class="temp">22</span
+								><span class="temp-btn-container flex item-center"><button class="temp-btn">°C</button><span class="temp-divider">|</span><button class="temp-btn">°F</button></span>
+							</h1>
+						</div>
 						<h2 class="city">New York</h2>
 					</div>
 				</div>
@@ -74,16 +77,19 @@
 			</div>
 		</div>
 
-        <script>
-            const apiKey = "0af1269892ffd580e12241bf7b5e907c";
-            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhaka";
-            async function checkWeather(){
-                const response = await fetch(apiUrl + `&appid=${apiKey}`);
-                var data = await response.json();
-                console.log(data);
-            }
-            checkWeather();
-        </script>
+		<script>
+			const apiKey = "0af1269892ffd580e12241bf7b5e907c";
+			const apiUrl =
+				"https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhaka";
+			async function checkWeather() {
+				const response = await fetch(apiUrl + `&appid=${apiKey}`);
+				var data = await response.json();
+				console.log(data);
+				document.querySelector(".city").innerHTML = data.name;
+				document.querySelector(".temp").innerHTML = data.main.temp;
+			}
+			checkWeather();
+		</script>
 	</body>
 </html>
 
