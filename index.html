@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+	<!-- Head -->
+    <head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- Google font -->
@@ -10,10 +11,14 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet" />
 		<!-- Linking External CSS file -->
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style/style.css" />
+		<link rel="stylesheet" href="style/common.css" />
+		<link rel="stylesheet" href="style/responsive.css" />
 		<title>Weather Web App</title>
 	</head>
-	<body>
+
+	<!-- Body Section -->
+    <body>
 		<div class="card">
 			<!-- Search Bar Container -->
 			<div class="container search flex justify-center item-center">
@@ -26,7 +31,10 @@
 					<img src="images/search.png" alt="Search icon" />
 				</button>
 			</div>
+
+            <!-- Weather Details -->
 			<div class="container">
+                <!-- Icon, Celcius and City name -->
 				<div class="weather-container responsive-flex item-center justify-center">
 					<img class="weather-icon" src="images/rain.png" alt="Rain Icon" />
 					<div class="weather">
@@ -34,6 +42,8 @@
 						<h2 class="city">New York</h2>
 					</div>
 				</div>
+
+                <!-- Humidity and Wind -->
 				<div class="details responsive-flex justify-between item-center">
 					<div class="col flex justify-center item-center">
 						<img src="images/humidity.png" alt="Humidity" />

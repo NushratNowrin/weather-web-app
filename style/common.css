@@ -1,0 +1,29 @@
+/* Global Styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+/* Common Styling */
+.flex {
+	display: flex;
+}
+.responsive-flex{
+	display: flex;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.item-center {
+	align-items: center;
+}
+.search-contain {
+	border: 0;
+	outline: 0;
+	background: #ebfffc;
+	height: 60px;
+}

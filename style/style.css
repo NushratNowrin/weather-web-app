@@ -1,0 +1,76 @@
+body {
+	background: #222;
+}
+
+/* The main container with gradient background */
+.card {
+	width: 90%;
+	background: linear-gradient(135deg, #00feba, #5b548a);
+	color: #fff;
+	margin: 50px auto;
+	border-radius: 20px;
+	padding: 80px 35px;
+	text-align: center;
+}
+
+/* Search Bar Container */
+.container {
+	width: 60%;
+	margin: 0 auto;
+}
+.search input {
+	color: #555;
+	padding: 10px 25px;
+	border-radius: 30px;
+	flex: 1;
+	margin-right: 16px;
+	font-size: 18px;
+}
+.search button {
+	border-radius: 50%;
+	width: 60px;
+	cursor: pointer;
+}
+.search button img {
+	width: 18px;
+}
+
+/* Weather Details*/
+
+/* Icon, Celcius and City name */
+.weather-container{
+	margin-top: 30px;
+}
+.weather-icon{
+	width: 170px;
+}
+.weather{
+	text-align: left;
+	margin-left: 10px;
+}
+.weather h1{
+	font-size: 60px;
+	font-weight: 600;
+}
+.weather h2{
+	font-size: 40px;
+	font-weight: 500;
+	margin-top: -5px;
+}
+
+/* Humidity and Wind */
+.details{
+	padding: 0 20px;
+	margin-top: 50px;
+}
+.col{
+	text-align: left;
+}
+.col img{
+	width: 40px;
+	margin-right: 10px;
+}
+.humidity, .wind{
+	font-size: 28px;
+	margin-top: -6px;
+}
