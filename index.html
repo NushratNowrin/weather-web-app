@@ -27,20 +27,23 @@
 		<div class="card">
 
 			<!-- Search Bar Container -->
-			<div class="container search flex justify-center item-center">
+			<div class="container search responsive-flex justify-center item-center">
 				<input
 					class="search-contain"
 					type="text"
 					placeholder="Enter City Name"
 					spellcheck="false" />
-				<button class="flex justify-center item-center search-contain">
+				<!-- <button class="flex justify-center item-center search-contain">
 					<img src="images/search.png" alt="Search icon" />
+				</button> -->
+				<button class="flex justify-center item-center search-contain">
+					Get Weather
 				</button>
 			</div>
 
 			<!-- Weather Details -->
 			<div class="container">
-                
+
 				<!-- Icon, Celcius and City name -->
 				<div
 					class="weather-container responsive-flex item-center justify-center">
@@ -70,5 +73,18 @@
 				</div>
 			</div>
 		</div>
+
+        <script>
+            const apiKey = "0af1269892ffd580e12241bf7b5e907c";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=dhaka";
+            async function checkWeather(){
+                const response = await fetch(apiUrl + `&appid=${apiKey}`);
+                var data = await response.json();
+                console.log(data);
+            }
+            checkWeather();
+        </script>
 	</body>
 </html>
+
+<!-- 0af1269892ffd580e12241bf7b5e907c -->

@@ -27,13 +27,14 @@ body {
 	font-size: 18px;
 }
 .search button {
-	border-radius: 50%;
-	width: 60px;
+	font-size: 18px;
+	padding: 10px 25px;
+	border-radius: 30px;
 	cursor: pointer;
 }
-.search button img {
+/* .search button img {
 	width: 18px;
-}
+} */
 
 /* Weather Details*/
 
