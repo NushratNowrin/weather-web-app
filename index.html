@@ -14,34 +14,43 @@
 		<title>Weather Web App</title>
 	</head>
 	<body>
-		
-		<div class="card ">
-            <!-- Search Bar Container -->
+		<div class="card">
+			<!-- Search Bar Container -->
 			<div class="container search flex justify-center item-center">
-				<input class="search-contain" type="text" placeholder="Enter City Name" spellcheck="false" />
-				<button class="flex justify-center item-center search-contain"><img src="images/search.png" alt="Search icon" /></button>
+				<input
+					class="search-contain"
+					type="text"
+					placeholder="Enter City Name"
+					spellcheck="false" />
+				<button class="flex justify-center item-center search-contain">
+					<img src="images/search.png" alt="Search icon" />
+				</button>
 			</div>
-            <div class="container weather">
-                <img class="weather-icon" src="images/rain.png" alt="Rain Icon">
-                <h1 class="temp">22°C</h1>
-                <h2 class="city">New York</h2>
-                <div class="details flex justify-between item-center">
-                    <div class="col flex item-center">
-                        <img src="images/humidity.png" alt="Humidity">
-                        <div>
-                            <p class="humidity">50%</p>
-                            <p>Humidity</p>
-                        </div>
-                    </div>
-                    <div class="col flex item-center">
-                        <img src="images/wind.png" alt="Wind">
-                        <div>
-                            <p class="wind">15 km/h</p>
-                            <p>Wind Speed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<div class="container">
+				<div class="weather-container responsive-flex item-center justify-center">
+					<img class="weather-icon" src="images/rain.png" alt="Rain Icon" />
+					<div class="weather">
+						<h1 class="temp">22°C</h1>
+						<h2 class="city">New York</h2>
+					</div>
+				</div>
+				<div class="details responsive-flex justify-between item-center">
+					<div class="col flex justify-center item-center">
+						<img src="images/humidity.png" alt="Humidity" />
+						<div>
+							<p class="humidity">50%</p>
+							<p>Humidity</p>
+						</div>
+					</div>
+					<div class="col flex justify-center item-center">
+						<img src="images/wind.png" alt="Wind" />
+						<div>
+							<p class="wind">15 km/h</p>
+							<p>Wind Speed</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
