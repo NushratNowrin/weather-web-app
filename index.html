@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 	<!-- Head -->
-    <head>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<!-- Google font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet" />
+
+		<!-- Title and Fav Icon -->
+		<title>Weather Web App</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+
 		<!-- Linking External CSS file -->
 		<link rel="stylesheet" href="style/style.css" />
 		<link rel="stylesheet" href="style/common.css" />
 		<link rel="stylesheet" href="style/responsive.css" />
-		<title>Weather Web App</title>
 	</head>
 
 	<!-- Body Section -->
-    <body>
+	<body>
 		<div class="card">
+
 			<!-- Search Bar Container -->
 			<div class="container search flex justify-center item-center">
 				<input
@@ -32,10 +38,12 @@
 				</button>
 			</div>
 
-            <!-- Weather Details -->
+			<!-- Weather Details -->
 			<div class="container">
-                <!-- Icon, Celcius and City name -->
-				<div class="weather-container responsive-flex item-center justify-center">
+                
+				<!-- Icon, Celcius and City name -->
+				<div
+					class="weather-container responsive-flex item-center justify-center">
 					<img class="weather-icon" src="images/rain.png" alt="Rain Icon" />
 					<div class="weather">
 						<h1 class="temp">22°C</h1>
@@ -43,7 +51,7 @@
 					</div>
 				</div>
 
-                <!-- Humidity and Wind -->
+				<!-- Humidity and Wind -->
 				<div class="details responsive-flex justify-between item-center">
 					<div class="col flex justify-center item-center">
 						<img src="images/humidity.png" alt="Humidity" />
