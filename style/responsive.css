@@ -13,6 +13,9 @@
 	.weather h2{
 		font-size: 32px;
 	}
+    .temp{
+        width: 115px;
+    }
 }
 /* Mobile */
 @media only screen and (max-width: 576px){

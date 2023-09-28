@@ -62,12 +62,18 @@ body {
 .temp-btn-container{
 	margin-left: 5px;
 }
+.temp{
+	width: 175px;
+}
 .temp-btn{
 	width: 30px;
 	height: 30px;
 	border: 0;
 	border-radius: 40px;
 	text-align: center;
+}
+#celcius{
+	background-color: yellow;
 }
 .temp-divider{
 	font-size: 24px;
