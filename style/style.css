@@ -14,6 +14,14 @@ body {
 }
 
 /* Search Bar Container */
+.location-btn{
+	padding: 5px 10px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.location-icon{
+	height: 30px;
+}
 .container {
 	width: 60%;
 	margin: 0 auto;
@@ -23,11 +31,11 @@ body {
 	padding: 10px 25px;
 	border-radius: 30px;
 	flex: 1;
-	margin-right: 16px;
 	font-size: 18px;
 }
-.search button {
-	font-size: 18px;
+.search-btn {
+	font-size: 14px;
+	font-weight: 600;
 	padding: 10px 25px;
 	border-radius: 30px;
 	cursor: pointer;
@@ -54,11 +62,11 @@ body {
 	margin-left: 10px;
 }
 .weather h1{
-	font-size: 60px;
+	font-size: 40px;
 	font-weight: 600;
 }
 .weather h2{
-	font-size: 40px;
+	font-size: 32px;
 	font-weight: 500;
 	margin-top: -5px;
 }
@@ -67,7 +75,7 @@ body {
 	margin-left: 5px;
 }
 .temp{
-	width: 175px;
+	width: 120px;
 }
 .temp-btn{
 	width: 30px;
