@@ -28,12 +28,13 @@
 			<!-- Search Bar Container -->
 			<div class="container search responsive-flex column-gap justify-center item-center">
                 <div class="flex column-gap justify-center item-center">
-                    <button class="location-btn search-contain flex justify-center item-center">
+                    <button id="location-btn" class="location-btn search-contain flex justify-center item-center">
                         <img class="location-icon" src="images/location.png" alt="">
                     </button>
                     <input
                         class="search-input search-contain"
                         type="text"
+                        id="search-input"
                         placeholder="Enter City Name"
                         spellcheck="false" />
                 </div>
@@ -87,7 +88,8 @@
 			</div>
 		</div>
         <!-- linking with JavaScript file -->
-		<script src="style.js"></script>
+		<script src="JS/style.js"></script>
+		<script src="JS/location.js"></script>
 	</body>
 </html>
 
