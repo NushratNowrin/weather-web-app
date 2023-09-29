@@ -40,6 +40,7 @@ function getData(lat, long) {
 					});
 				document.querySelector(".wind").innerHTML = data.wind.speed;
 				document.querySelector(".humidity").innerHTML = data.main.humidity;
+				document.querySelector(".description").innerHTML = data.weather[0].description;
 
 				if (data.weather[0].main == "Clouds") {
 					weatherIcon.src = "images/clouds.png";
@@ -80,4 +81,12 @@ const locationBtn = document
 			gotLocation,
 			failedToGet
 		);
+		document.getElementById("location-btn").style.backgroundColor = "#FFE269";
 	});
+// Function to automatically trigger the button click event on page reload
+function triggerButtonClick() {
+	document.getElementById("location-btn").click();
+}
+
+// Add an event listener to window.onload
+window.onload = triggerButtonClick;

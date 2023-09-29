@@ -39,6 +39,7 @@ function checkWeather(city) {
   
           document.querySelector('.wind').innerHTML = data.wind.speed;
           document.querySelector('.humidity').innerHTML = data.main.humidity;
+          document.querySelector(".description").innerHTML = data.weather[0].description;
   
           var weatherIcon = document.getElementById('weather-icon');
   
@@ -66,8 +67,9 @@ function checkWeather(city) {
   
     xhr.send();
   }
-  
+
 searchBtn.addEventListener("click", () =>{
     checkWeather(searchBox.value);
+    document.getElementById('location-btn').style.backgroundColor = 'white';
 })
 
